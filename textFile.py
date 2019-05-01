@@ -15,6 +15,7 @@ var3 = IntVar()
 Checkbutton(master, text="Spider", variable=var3).grid(row=3, sticky=W)
 var4 = IntVar()
 Checkbutton(master, text="Deamon", variable=var4).grid(row=4, sticky=W)
+
 Button(master, text='Quit', command=master.quit).grid(row=6, sticky=W, pady=4)
 Button(master, text='Show', command=var_states).grid(row=7, sticky=W, pady=4)
 
