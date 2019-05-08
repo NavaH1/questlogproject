@@ -1,22 +1,24 @@
-from tkinter import *
-master = Tk()
+import calendar #
 
-def var_states():
-   print("Human: %d,\nAlien: %d,\nSpider: %d,\nDeamon: %d" % (var1.get(), var2.get(), var3.get(), var4.get()))
+year = int((input)("Please type in the year you would like to check: "))
+month = ((input)("Please type in the month you would like to check: ")).lower() # the lower is so we can make any
+# input in lower case letters.
 
+month_cal= {'december': 12,
+'november': 11,
+'october': 10,
+'september': 9,
+'august': 8,
+'july': 7,
+'june': 6,
+'may': 5,
+'april': 4,
+'march': 3,
+'february': 2,
+'january': 1}
 
-master.geometry('450x200')
-Label(master, text="Your species:").grid(row=0, sticky=W)
-var1 = IntVar()
-Checkbutton(master, text="Human", variable=var1).grid(row=1, sticky=W)
-var2 = IntVar()
-Checkbutton(master, text="Alien", variable=var2).grid(row=2, sticky=W)
-var3 = IntVar()
-Checkbutton(master, text="Spider", variable=var3).grid(row=3, sticky=W)
-var4 = IntVar()
-Checkbutton(master, text="Deamon", variable=var4).grid(row=4, sticky=W)
-
-Button(master, text='Quit', command=master.quit).grid(row=6, sticky=W, pady=4)
-Button(master, text='Show', command=var_states).grid(row=7, sticky=W, pady=4)
-
-mainloop()
+if month.isdigit():# I use the command .isdigit to check if the input is a number
+   int_month_imp = int(month) # is use this command to change the input from str to int
+   print(calendar.month(year, int_month_imp))
+else:
+   print(calendar.month(year, month_cal.get(month)))# we use the dictionary to assign str (months ) to number
