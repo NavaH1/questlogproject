@@ -1,6 +1,6 @@
 # Python program to create a simple GUI 
 # calculator using Tkinter
-# https://www.geeksforgeeks.org/python-simple-gui-calculator-using-tkinter/
+# Source: https://www.geeksforgeeks.org/python-simple-gui-calculator-using-tkinter/
 
 # import everything from tkinter module 
 from tkinter import *
